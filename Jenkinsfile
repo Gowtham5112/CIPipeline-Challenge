@@ -52,7 +52,7 @@ pipeline{
             emailext attachLog: true, body: "<b>Example</b><br>Project: ${env.JOB_NAME}", from: 'gowthamn1208@gmail.com',compressLog: true, mimeType: 'text/html', replyTo: '', subject: "Deploy Successfull Project ${env.JOB_NAME}", to: "mukeshkousalya2k17@gmail.com;gowthamn1208@gmail.com";
          }  
          failure {  
-             mail bcc: '', body: "<b>Example</b><br>Project: ${env.JOB_NAME} <br>Build Number: ${env.BUILD_NUMBER} <br> Stage Name: $last_started <br> URL de build: ${env.BUILD_URL}", cc: 'gowthamrox89@gmail.com,gowthamn1208@gmail.com', charset: 'UTF-8', from: 'gowthamn1208@gmail.com', mimeType: 'text/html', replyTo: '', subject: "Deployment failed for Project -> ${env.JOB_NAME}", to: "mukeshkousalya2k17@gmail.com,gowthamn1208@gmail.com";  
+             mail bcc: '', body: "<b>Example</b><br>Project: ${env.JOB_NAME} <br>Build Number: ${env.BUILD_NUMBER} <br> Stage Name: $last_started <br> URL de build: ${env.BUILD_URL}", cc: 'gowthamrox89@gmail.com,gowthamn1208@gmail.com', charset: 'UTF-8', from: 'gowthamn1208@gmail.com', mimeType: 'text/html', replyTo: '', subject: "Deployment failed for Project -> ${env.JOB_NAME}", to: "mukeshkousalya2k17@gmail.com;gowthamn1208@gmail.com";  
          }  
          unstable {  
              echo 'This will run only if the run was marked as unstable'  
